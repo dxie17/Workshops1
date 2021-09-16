@@ -1,0 +1,26 @@
+// Workshop: 3
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/06/12
+// Description: I have done all the coding by myself and only copied the code
+// that my professor provided to complete my workshops and assignments.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. What I learned in workshop 3
+
+In workshop 3 I learned three important points: how to define a class type and how to privatize data within the class, how to access data within the class directly and from other classes through public member functions indirectly, how to use standard library facilities to format data inserted into the output stream.
+Firstly, I learned how to define a class, knowing which parts are pubic and which parts are private. For example, I defined a class Food {char m_foodName[31];int m_calories; public:void setEmpty();void set(const char* name, int calories, int timeWhen);}. In the class, the data is private automatically unless they are open for public. So, variables m_foodName and m_calories are private but the function setEmpty() is public because it's declared to public. In this way, the safety of the data will be higher.
+Secondly, each function within the class can access the data of the class freely but private data cannot be accessed from the other class directly. For example, in the class Food variables m_foodName and m_calories can be accessed by all the functions within the Food class such as set() even they are private. But they cannot be accessed by another class such as the class CalorieList because they are private, which makes the data safer. To make the class CalorieList accesses the private data in the class Food, we have to create a public function such as calories() that returns the private data so that the private data will be accessed by the class CalorieList indirectly.
+Thirdly, I learned how to format output data by using such as cout.setf(), cout.unsetf(), cout.width(), cout.precision(). These standard library facilities are very useful for the standardized output.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. the difficulties I encountered in workshop 3
+
+As for the difficulties I encountered in workshop 3, I would like to say that properly accessing private data from another class indirectly is a big challenge. For example, I create two classes: CalorieList and Food. The data of them are connected closely so that when I wrote codes in CalorieList, I have to access the data in Food. At first, I don't know how to do it but when I tried many times and had a deeper understanding of class, I succeeded in that. I believe that after I practise for more and more times in the future, I will master the class freely.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+THE END
+

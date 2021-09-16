@@ -1,0 +1,27 @@
+// Workshop: 7
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/07/16
+// Description: I have done all the coding by myself and only copied the code
+// that my professor provided to complete my workshops and assignments.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. What I learned in workshop 7
+
+In workshop 7 I learned how to define a derived class inheriting from a base class, how shadowing a base class member function with a derived class member function works and how to access a shadowed member function that is defined in a base class. Also, I learned how to customize the input/output operators with these classes.
+Firstly, I learned how to define a derived class inheriting from a base class. This is not complex because the format is fixed. For example, I create a class Truck derived from MotorVehicle like this: class Truck: public MotorVehicle{} so that the class Truck can inherit public member functions from MotorVehicle.
+Secondly, I learned how shadowing a base class member function with a derived class member function works and how to access a shadowed member. For example, I created a function write () in class MotorVehicle and another function write () in its child class Truck. When I called the write () function in Truck, the MotorVehicle write () was shadowed. When I want to call MotorVehicle write () function, I use MotorVehicle::write() to avoid shadowing.
+Thirdly, I learned how to customize the input/output operators with classes. For example, I created std::ostream& operator<<(std::ostream& ostr, const Truck &A) to make sure output for class Truck works well.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. the difficulties I encountered in workshop 7
+
+When I tried to complete workshop 7, the most difficult part for me was that how to write the data into the base class through derived class. For example, when the constructor function of Truck was started, there are four parameters: char *plate, int year, double capacity, char*address. But three of them are stored in the base class but not Truck. To solve the problem, I looked upon a lot of material on the internet and the reading files offered by my professor on the lectures. At last I found creating a derived constructor function from the base class could be very helpful. So, I create a function Truck::Truck(const char *plate, int year, double capacity, const char*address):MotorVehicle(plate, year, address){} and solved the problem finally.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+THE END
+

@@ -1,0 +1,26 @@
+// Workshop: 8
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/07/25
+// Description: I have done all the coding by myself and only copied the code
+// that my professor provided to complete my workshops and assignments.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. What I learned in workshop 8 and milestone 4
+
+Virtual functions and abstract base classes are very important and interesting topics because it's about abstract base classes and multi-derived classes based on the parent classes. In workshop 8 I learned how to define pure virtual functions, why I have to define pure virtual functions and how to implement behavior using virtual functions. Meanwhile, I learned what's the difference between an abstract base class and a concrete class.  In milesotone 4 I practised more on how to define a derived class inheriting from a base class, how to shadow a base class member function with a derived class member function and how to access a shadowed member function that is defined in a base class.
+Firstly, I learned how to create abstract base classes, pure virtual functions and why create virtual functions. For example, I defined the base class Shape {} and derived class LblShape{} as well as LblShape's child classes Line{} and Rectangle{}. At the same time, I created pure virtual function draw (std::ostream& ostr)const = 0 to make sure the multi-layer classes would work well. The reason why I defined a virtual function is that when I wrote the code for the function of the derived class it will override the same function of the base class so that the function in the derived class will be called properly.
+Secondly, I learned what's the difference between an abstract base class and a concrete class. For example, in workshop 8 class Shape {} is an abstract base and Line{}, Rectangle{} are concrete class. The difference between them is that base class could be abstract so that we can create pure virtual functions in them. In that case we can rewrite the functions in derived classes if necessary anytime while functions of concrete classes must be concrete and detailed so that they will be executed well. Uncomplete codes for functions of concrete classes are not permitted.
+Thirdly, I I practised more on base classes and derived classes inheriting from a base class. The milestone is very logical and good way to practise on classes. For example, I created derived classes CovidPatient and TriagePatient from base class Patient, while the Patient's base class is IOAble. The chain is very clear and concise.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. the difficulties I encountered in workshop 8 and milestone 4
+
+When I tried to complete workshop 8, the most difficult part for me was to make sure what's the logics for different classes. Which one derives from another one, it's very important. At first, I'm not very clear the relationships between classes so that I don't know which derived functions would be called and which ones are shadowed. That makes the coding very difficult. To solve the problem, I have to stop and learn the relationships very clear first by using some charts. When I learned clearly, the coding was not that difficult. I solve the problem finally. 
+When I tried to complete milesotone 4, the difficult part is about how to use the global variable properly because I have to create a global variable delimiter to read the file appropriately in the module Time.cpp. For example, at first I created a function read() to get the time in the format HH:MM with the delimiter '\n'. But in milestone 4 we are required to input "ccc,333333333,10,23:45,ccc ccc ccc" to get the time. Here the delimiter is ','. To solve the problem I have to create a global variable delimiter to control the function and it works.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+THE END
+

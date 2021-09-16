@@ -1,0 +1,23 @@
+// Workshop: 9
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/08/01
+// Description: I have done all the coding by myself and only copied the code
+// that my professor provided to complete my workshops and assignments.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. What I learned in workshop 9 and milestone 5
+
+In workshop 9 l learned how to create function templates and know how function templates work. Meanwhile, I learned how to implement calls to function templates.
+Firstly, I learned how to create function templates and know how they work. For example, I created two function templates: template <typename T1, typename T2> bool search(Collection<T1> & obj, T1 *array,int noOfElement, T2 key) {} and template <typename T> void listArrayElements(const char*listTitle, T& array, int noOfElement) {}. In the function templates, templates represent the type of the parameter will receive.
+Secondly, I learned how to implement calls to function templates. For example, for the first function template I create template <typename T1, typename T2> to realize the function. The reason why I have to create two typenames is because in the template function there will be 4 parameters, just one is defined(int), the rest of 3 is not defined. But the first one(Collection<T1>) is relative with the second one(T1) so I can solve it just by using one typename. The last one(T2) I have to create another typename to represent it. In this way, when the template function called in the main.cpp it will create corresponding function. For example, in main.cpp when search(Cres,C,7,"Tesla") calls the template function it will create a function search(Collection<Car> & obj, Car *array,int noOfElement,char* key) to execute it and get results. While search(Sres, S, 6, 4.0) calls the template function it will create a function search(Collection<Student> & obj, Student *array,int noOfElement,double key) to execute it and get results and so on. , for the second function template I create template <typename T> to realize the function. It's easy to understand compared with the one above. The reason why I have to create just one typename is because in the template function there will be 3 parameters, two of them is defined(const char,int), just one is not defined. In this way, when the template function called in the main.cpp it will create corresponding function. For example, in main.cpp when listArrayElements("All the cars:", C,7) calls the template function it will create a function listArrayElements(const char*listTitle, Car & array, int noOfElement) to execute it and get results. While listArrayElements("All students:", S, 6) calls the template function it will create a function listArrayElements(const char*listTitle, Student & array, int noOfElement) to execute it and get results and so on.
+In milestone 5 I have more opportunity to practice on derived class and base class, DMA and how to use fstream functions to realize output and input from a file.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. the difficulties I encountered in workshop 9 and milestone 5
+
+The template is not a very difficult concept to understand. But for milestone 5 DMA is still a difficult point. The reason why DMA is difficult is based on two points. Firstly, it's very difficult to debug the problem I encounter because the error warning is difficult to understand. Sometimes the place the warning shows is not the right place the error occurs, which makes debugging so difficult. Secondly, we cannot distinguish dynamic memory with static memory so that sometimes it's difficult for me to deallocate dynamic memory properly. We all know that unproperly deallocating dynamic memory always produces serious problems for the whole program. In that case, I think that part is the most difficult point for me.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+THE END
+

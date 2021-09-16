@@ -1,0 +1,27 @@
+// Workshop: 4
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/06/20
+// Description: I have done all the coding by myself and only copied the code
+// that my professor provided to complete my workshops and assignments.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. What I learned in workshop 4
+
+In workshop 4 I learned several important points: how to define constructors including default constructor and overloading constructors with different number of arguments, how to define and code a destructor to prevent memory leaks and how to use the reference of the current object. At the same time through workshop 4 I reviewed how to use overloading functions, allocate dynamic memories for variables and use class types properly.
+Firstly, I learned how to define constructors and use different kinds of constructors to facilitate the project. For example, to ensure initialization of class types successfully, I created three constructors including Label (), Label (const char* frameArg) and Label(const char* frameArg, const char* content) for the class Label with two variables {char m_frameArg[9];char* m_content; } to make sure successful initialization for all kinds of situations.
+Secondly, destructors were used in workshop 4 accordingly. The definition and coding of destructors are not difficult but be careful there could be always some problems caused by the inappropriate usage of destructors or if we ignore them. 
+Thirdly, I learned how to use the reference of the current object to make functions more easily executed by the current object and change the data stored in the current object. For example, in workshop 4 I created a function Canister& pour (double quantity) in the class Canister so that I can call the reference function to modify the data and store the data in the object by returning to the object.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. the difficulties I encountered in workshop 4
+
+The biggest difficulty I encountered in workshop 4 is in the part DIY about how to release the dynamic memories allocated to two different classes. Considering that allocation of the memories for one class is the prerequisite of another class, the order of deallocating memories should be determined, which made this part more difficult. For example, I created class Label {char m_frameArg[9];char* m_content;} and class LabelMaker{int m_noOfLabels; Label* m_Label;} to store data. The LabelMaker should be allocated memories first and then m_content. When I deallocate the momeries the order is opposite, delloacating m_content first and then LabelMaker. But there is always a problem for memories even I delloacted the meories in the right order. I found that just delloacating the memories of content is not enough because after I delloacated the memories I don't know where the pointer m_content points so that the compute doesn't know delloacation is successful or not, which results the delocation of LabelMaker is unsuccessful. I tried many times and finally I solved the problem through assigning nullptr to m_content after I deallocated it. It makes sense and there is no error for the codes anymore.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+THE END
+

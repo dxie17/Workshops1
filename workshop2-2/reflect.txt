@@ -1,0 +1,37 @@
+// Workshop: 2
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/06/03
+// Description: I have done all the coding by myself and only copied the code
+// that my professor provided to complete my workshops and assignments.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. What I learned in workshop 2
+
+In workshop 2 I learned three important points: function overloading, reference and dynamic memory. Function overloading is a very useful tool to name a function with the similar functionality flexibly so that we can make the codes more readable. For example, to read the data in a file I create a function load (). But I should load data from structures such as Employee. The functionality is similar but not all the same so that I want to name them the same to make the codes more readable. Because of function overloading I can write two functions with the same name load () but to use different parameters to determine which one will be executed in the codes. As for refence function it is more important and useful characteristics in C++, which makes functions easier by considering less pointers. As you may know, pointer is a basic point in C but not very easy to understand and use properly sometimes. Allocating dynamic memory is a new point I learned in C++ because in C course we didn't learn how to allocate memory. It's difficult to understand but through the excise I learned how to allocate dynamic memory for arrays and structures. More importantly, I learned what I should do to avoid memory leak to make the program complete and safe.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. the difficulties I encountered in workshop 2
+
+As for the difficulties I encountered in workshop 2, I think there are 2 things that impressed me and I learned a lot from them. The first one is about allocating dynamic memory for the data. At first, I allocated dynamic memory for the structure Employee. I thought I had done all the jobs but it's impossible to store name information in the structure. When I reviewed the structure, I found the *name which means it's a pointer so that I have to assign dynamic memory to the name again. But in dynamic memory to allocate another dynamic memory? I was confused with that. I had to ask Fardad for help and understood the point at last. Allocating dynamic memory to structures won't affect allocating other dynamic memory to names. I solved the problem finally.
+The second problem is about passing arguments to function load. At first, I want to pass the whole data of structure employees[n] to load (Employee & employees) but it's not permitted. I had been stuck here for a long time because I tried to realize the loop in the function load (Employee & employees). It seemed impossible. Under Fardad's instruction I passed just one piece of information to load (Employee & employees) and realized the loop in load () function, which is easier to get the same result. In workshop 2 I learned a lot and thanks for the kind help of Fardad.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+3. in-parameter and out-parameter
+An in-parameter is information being passed from the caller to the function while an out-parameter represents information that is passed from the function back to its caller, which is related with 2 parameter passing modes: call by value and call by reference in C++.
+Call-by-value means that when a parameter is passed from to a function, the value of that parameter is copied into a variable in the function and the parameter is not changed, which is a kind of in parameter. For example, I create a function add1, which is int add1(int n) {return n+1;}. C++ allows a function's body to change the value of a pass-by-value parameter (from n to n+1). But it only changes the variable in the function's frame, and has no effect other than that. In this circumstance, the value n is not changed. Assume w=5, we use int result=add1(w) to get 6. When add1() is executed, w is still 5. It's not changed. Here n is an in parameter.
+Let's see what happens in call-by-reference mode. we also create a function add1, which is int add1(int &n) {return n+1;}. Assume w=5, we use int result=add1(w) to get a same 6. But the process is quite different. The memory address of the caller's variable w is stored in n here. Any reference to n will automatically use variable w. The body of add1 begins to run. It needs to get the value of n so that it can add 1 to it. But n holds a memory address. The value at that memory address (which is the value of the caller's variable w) is fetched. Expression n+1 evaluates to 6. Now add1 needs to store that into n. But since n is a reference parameter, it is a memory address. Value 2 is stored in the memory at that address (which is where w is stored). So, w is set to hold 6. In that way w is changed to 6 finally. Here n is an out- parameter. That means n is changed in a function and passes the value outside of the function just like the pointer. In fact, since call by reference passes a memory address, it is actually passing a pointer. Call by pointer is really a special case of call by value where the value is a pointer. Call by reference is available in C++ but not in C. In C, we must pass an explicit pointer instead of an implicit one.
+In workshop 2, I didn't use an in-parameter but I really use one in workshop 1. In workshop 1 I create a function void strnCpy(char* des, const char* src, int len) to copy a string. The parameter int len is an in-parameter. To test it, I add the code "len=0" to  at the end of the function code. 
+    char str1[] = "firstplace";
+    char str2[] = "lastname";
+    int i = 5;
+    strnCpy(str1, str2, i);
+I print the value of i and the value of len. It shows that len is 0 and i is 5. The len of the value is not passed out of the function, which means it is an in-parameter. When I change int len to int &len by call-by-reference, when I executes the function the result is len=0 and i=0, where the len becomes an out-parameter so that it's value is changed and passed outside of the function.
+
+Reference: http://www.cs.ecu.edu/karl/2530/spr18/Notes/lec21A.html
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+THE END
+

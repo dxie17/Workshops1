@@ -1,0 +1,27 @@
+// Workshop: 5
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/06/30
+// Description: I have done all the coding by myself and only copied the code
+// that my professor provided to complete my workshops and assignments.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. What I learned in workshop 5
+
+In workshop 5 I learned how to define and create operators including unary member operator and binary member operator, how to define and create helper binary operator between classes and how to define and create a helper operator between a primitive type and a class.
+Firstly, I learned how to define and create operators including unary member operator and binary member operator. This is not complex so it's easy to understand. For example, to simplify operation I defined operators such as =(int number), +=(double balance) and -=(double balance).
+Secondly, I learned how to define and create helper binary operator between classes. For example, I created helper operator friend double operator +(const Account &accA, const Account &accB) to operate between different classes.
+Thirdly, I learned how to define and create a helper operator between a primitive type and a class. For example, I created another helper operator friend double operator +=(double & balance, const Account& accA) to operate between a primitive type and a class.
+The second and third part were not as easily understood as the first one, but at last I overcome the difficulties.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. the difficulties I encountered in workshop 5
+
+As I mentioned above, defining and creating helper binary operator between classes or between a primitive type and a class was not very easily understood so that I was stuck there for a long time at first. The reason is that I can't cope with the binary operator properly just because I thought operator was just like a specific function so that I have to obey the rules of the functions. In that way, I can't arrange the parameters at the right place when referring to binary operator. For example, when a class A plus an integer b and returns to a double c, I thought there would be 3 operands. I can't put all of them in the right place. But in fact, there are just two operands, not 3. The operator is not like the function exactly. It's just another important characteristic of C++. I learned a lot about the operators from workshop 5.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+THE END
+

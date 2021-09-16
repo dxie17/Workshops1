@@ -1,0 +1,20 @@
+// Workshop: 6
+// Part: 2
+// Full Name: Deyang Xie
+// Student ID: 150162204
+// Email Address: dxie17@myseneca.ca
+// Date: 2021/07/11
+// Description: I copy the following functions from  Yao Chen(134082197):
+/*setFilename(),loadText() saveAs(),TextFile(const char* filename, unsigned pageSize),TextFile(const TextFile& textFile),std::ostream& TextFile::view(std::ostream& ostr) const,std::istream& TextFile::getFile(std::istream& istr)*/
+// Mines can't run well, don't know why.
+//The rest codes are written by myself.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+the difficulties I encountered in workshop 6
+
+I do not know why my codes cannot run well, I spent at least 3 days to do it, too exhausting, I tried my best. Sorry about that.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+THE END
+
